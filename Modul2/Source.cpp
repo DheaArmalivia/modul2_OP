@@ -4,7 +4,7 @@
 
 void gambar()
 {
-	glPointSize(10);
+	glPointSize(50);
 	glBegin(GL_POINTS);
 	glColor3f(1, 0, 1);
 	glVertex3f(200, 200, 0);
