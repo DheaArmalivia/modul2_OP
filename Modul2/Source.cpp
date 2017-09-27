@@ -6,7 +6,15 @@ void gambar()
 {
 	glPointSize(50);
 	glBegin(GL_POINTS);
-	glColor3f(1, 0, 1);
+	/*glColor3f(1, 0, 1);*/
+	//glColor3f(0, 0, 0); no. 1
+	//glColor3f(0, 0, 1); no. 2 
+	//glColor3f(0, 1, 0); no. 3
+	//glColor3f(0, 1, 1); no. 4
+	//glColor3f(1, 0, 0); no. 5
+	//glColor3f(1, 0, 1); no. 6
+	//glColor3f(1, 1, 0); no. 7
+	glColor3f(1, 1, 1);
 	glVertex3f(200, 200, 0);
 	glVertex3f(200, -200, 0);
 	glVertex3f(-200, -200, 0);
