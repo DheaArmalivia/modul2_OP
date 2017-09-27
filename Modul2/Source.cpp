@@ -2,9 +2,24 @@
 #include <GL\freeglut.h>
 #include <iostream>
 
+void gambar()
+{
+	glPointSize(10);
+	glBegin(GL_POINTS);
+	glColor3f(1, 0, 1);
+	glVertex3f(200, 200, 0);
+	glVertex3f(200, -200, 0);
+	glVertex3f(-200, -200, 0);
+	glVertex3f(-200, 200, 0);
+	glEnd();
+}
+
 void render()
 {
+	/*glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	glutSwapBuffers();*/
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	gambar();
 	glutSwapBuffers();
 }
 
@@ -21,3 +36,4 @@ int main(int argc, char* argv[])
 	glutMainLoop();
 	return 0;
 }
+
