@@ -5,7 +5,7 @@
 void gambar()
 {
 	glPointSize(50);
-	glBegin(GL_POINTS);
+	glBegin(GL_LINES);
 	/*glColor3f(1, 0, 1);*/
 	//glColor3f(0, 0, 0); no. 1
 	//glColor3f(0, 0, 1); no. 2 
