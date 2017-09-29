@@ -2,6 +2,43 @@
 #include <GL\freeglut.h>
 #include <iostream>
 
+void square()
+{
+	glLineWidth(10);
+	glBegin(GL_LINE_LOOP);
+	glColor3f(1, 0, 0);
+	glVertex3f(-100, 100, 0); //kiri
+	glVertex3f(100, 100, 0); //kanan
+	glVertex3f(100, -100, 0); //kanan bawah
+	glVertex3f(-100, -100, 0); // kiri bawah
+	glEnd();
+}
+
+void triangle()
+{
+	glLineWidth(10); glBegin(GL_LINE_STRIP); //kiri
+	glColor3f(0, 0, 1);
+	glVertex3f(-100, 100, 0);
+	glVertex3f(-200, 0, 0);
+	glVertex3f(-100, 0, 0);
+	glEnd();
+	glBegin(GL_LINE_STRIP); //atas
+	glVertex3f(100, 100, 0);
+	glVertex3f(0, 200, 0);
+	glVertex3f(0, 100, 0);
+	glEnd();
+	glBegin(GL_LINE_STRIP); //kanan
+	glVertex3f(100, -100, 0);
+	glVertex3f(200, 0, 0);
+	glVertex3f(100, 0, 0);
+	glEnd();
+	glBegin(GL_LINE_STRIP); //bawah
+	glVertex3f(-100, -100, 0);
+	glVertex3f(0, -200, 0);
+	glVertex3f(0, -100, 0);
+	glEnd();
+}
+
 void gambar()
 {
 	//glPointSize(50);
@@ -33,7 +70,9 @@ void render()
 	/*glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glutSwapBuffers();*/
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	gambar();
+	//gambar();
+	square();
+	triangle();
 	glutSwapBuffers();
 }
 
