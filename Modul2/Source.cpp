@@ -19,10 +19,12 @@ void gambar()
 	//glColor3f(1, 0, 1); no. 6
 	//glColor3f(1, 1, 0); no. 7
 	glColor3f(1, 1, 1);
-	glVertex3f(200, 200, 0);
-	glVertex3f(200, -200, 0);
-	glVertex3f(-200, -200, 0);
-	glVertex3f(-200, 200, 0);
+	glVertex3f(-100, 200, 0); //kiri atas
+	glVertex3f(100, 200, 0); //kanan atas
+	glVertex3f(200, 0, 0); //kanan tengah
+	glVertex3f(100, -200, 0); //kanan bawah
+	glVertex3f(-100, -200, 0); //kiri bawah
+	glVertex3f(-200, 0, 0); //kiri tengah
 	glEnd();
 }
 
