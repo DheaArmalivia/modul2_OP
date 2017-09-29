@@ -2,42 +2,124 @@
 #include <GL\freeglut.h>
 #include <iostream>
 
-void square()
+void eye_rg()
 {
-	glLineWidth(10);
-	glBegin(GL_LINE_LOOP);
-	glColor3f(1, 0, 0);
-	glVertex3f(-100, 100, 0); //kiri
-	glVertex3f(100, 100, 0); //kanan
-	glVertex3f(100, -100, 0); //kanan bawah
-	glVertex3f(-100, -100, 0); // kiri bawah
+	glLineWidth(10); glBegin(GL_LINE_STRIP);
+	glColor3f(0, 0, 1); //blue
+	glVertex3f(250, 250, 0);
+	glVertex3f(300, 250, 0);
+	glVertex3f(300, 150, 0);
+	glVertex3f(250, 150, 0);
+	glEnd();
+	glBegin(GL_LINE_STRIP);
+	glColor3f(1, 0, 0); //red
+	glVertex3f(250, 250, 0);
+	glVertex3f(200, 250, 0);
+	glVertex3f(200, 150, 0);
+	glVertex3f(250, 150, 0);
 	glEnd();
 }
 
-void triangle()
+void eye_lf()
 {
-	glLineWidth(10); glBegin(GL_LINE_STRIP); //kiri
-	glColor3f(0, 0, 1);
-	glVertex3f(-100, 100, 0);
-	glVertex3f(-200, 0, 0);
-	glVertex3f(-100, 0, 0);
+	glLineWidth(10);
+	glBegin(GL_LINE_STRIP);
+	glColor3f(0, 0, 1); //blue
+	glVertex3f(-250, 250, 0);
+	glVertex3f(-300, 250, 0);
+	glVertex3f(-300, 150, 0);
+	glVertex3f(-250, 150, 0);
 	glEnd();
-	glBegin(GL_LINE_STRIP); //atas
-	glVertex3f(100, 100, 0);
-	glVertex3f(0, 200, 0);
-	glVertex3f(0, 100, 0);
-	glEnd();
-	glBegin(GL_LINE_STRIP); //kanan
-	glVertex3f(100, -100, 0);
-	glVertex3f(200, 0, 0);
-	glVertex3f(100, 0, 0);
-	glEnd();
-	glBegin(GL_LINE_STRIP); //bawah
-	glVertex3f(-100, -100, 0);
-	glVertex3f(0, -200, 0);
-	glVertex3f(0, -100, 0);
+	glBegin(GL_LINE_STRIP);
+	glColor3f(1, 0, 0); //red
+	glVertex3f(-250, 250, 0);
+	glVertex3f(-200, 250, 0);
+	glVertex3f(-200, 150, 0);
+	glVertex3f(-250, 150, 0);
 	glEnd();
 }
+
+void nose()
+{
+	glLineWidth(10);
+	glBegin(GL_LINE_STRIP);
+	glColor3f(1, 0, 0); //red
+	glVertex3f(-100, 0, 0);
+	glVertex3f(-100, 50, 0);
+	glVertex3f(100, 50, 0);
+	glVertex3f(100, 0, 0);
+	glEnd();
+	glBegin(GL_LINE_STRIP);
+	glColor3f(0, 0, 1); //blue
+	glVertex3f(-100, 0, 0);
+	glVertex3f(-100, -50, 0);
+	glVertex3f(100, -50, 0);
+	glVertex3f(100, 0, 0);
+	glEnd();
+}
+
+void mouth()
+{
+	glLineWidth(10);
+	glBegin(GL_LINE_LOOP);
+	glColor3f(1, 0, 0); //warna merah
+	glVertex3f(-200, -150, 0);
+	glVertex3f(-200, -200, 0);
+	glVertex3f(200, -200, 0);
+	glVertex3f(200, -150, 0);
+	glEnd();
+	glBegin(GL_LINE_STRIP);
+	glColor3f(0, 0, 1); //warna biru kiri
+	glVertex3f(-150, -200, 0);
+	glVertex3f(-150, -250, 0);
+	glVertex3f(-50, -250, 0);
+	glVertex3f(-50, -200, 0);
+	glEnd();
+	glBegin(GL_LINE_STRIP);
+	glColor3f(0, 0, 1); //warna biru kanan
+	glVertex3f(150, -200, 0);
+	glVertex3f(150, -250, 0);
+	glVertex3f(50, -250, 0);
+	glVertex3f(50, -200, 0);
+	glEnd();
+}
+
+//void square()
+//{
+//	glLineWidth(10);
+//	glBegin(GL_LINE_LOOP);
+//	glColor3f(1, 0, 0);
+//	glVertex3f(-100, 100, 0); //kiri
+//	glVertex3f(100, 100, 0); //kanan
+//	glVertex3f(100, -100, 0); //kanan bawah
+//	glVertex3f(-100, -100, 0); // kiri bawah
+//	glEnd();
+//}
+
+//void triangle()
+//{
+//	glLineWidth(10); glBegin(GL_LINE_STRIP); //kiri
+//	glColor3f(0, 0, 1);
+//	glVertex3f(-100, 100, 0);
+//	glVertex3f(-200, 0, 0);
+//	glVertex3f(-100, 0, 0);
+//	glEnd();
+//	glBegin(GL_LINE_STRIP); //atas
+//	glVertex3f(100, 100, 0);
+//	glVertex3f(0, 200, 0);
+//	glVertex3f(0, 100, 0);
+//	glEnd();
+//	glBegin(GL_LINE_STRIP); //kanan
+//	glVertex3f(100, -100, 0);
+//	glVertex3f(200, 0, 0);
+//	glVertex3f(100, 0, 0);
+//	glEnd();
+//	glBegin(GL_LINE_STRIP); //bawah
+//	glVertex3f(-100, -100, 0);
+//	glVertex3f(0, -200, 0);
+//	glVertex3f(0, -100, 0);
+//	glEnd();
+//}
 
 void gambar()
 {
@@ -71,8 +153,12 @@ void render()
 	glutSwapBuffers();*/
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	//gambar();
-	square();
-	triangle();
+	/*square();
+	triangle();*/
+	eye_rg();
+	eye_lf();
+	nose();
+	mouth();
 	glutSwapBuffers();
 }
 
